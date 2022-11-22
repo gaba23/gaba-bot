@@ -34,7 +34,7 @@ export const slash: Command = {
       console.log(anterior)
       console.log(agora)
       console.log(anterior.getDay() < agora.getDay())
-      if (anterior.getDay() > agora.getDay()) {
+      if (anterior.getDay() < agora.getDay()) {
         await UsuarioSorteSchema.findByIdAndUpdate(usuario.id, {
           $set: {
             _id: usuario.id,
